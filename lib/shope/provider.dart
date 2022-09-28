@@ -21,7 +21,6 @@ class Products_ProviderNew extends ChangeNotifier{
   }
 
   void filterprice(){
-
     for(i=0;i<mainfinalproducteList.length;i++)
       {
         if(mainfinalproducteList[i].price! >=0 && mainfinalproducteList[i].price! <=49)
@@ -46,7 +45,7 @@ class Products_ProviderNew extends ChangeNotifier{
   }
 
   void filterpricethree(){
-    mainfinalproducteList.clear();
+   // mainfinalproducteList.clear();
     for(i=0;i<mainfinalproducteList.length;i++)
     {
       if(mainfinalproducteList[i].price! >=100 )//help//popmenubutten

@@ -70,12 +70,7 @@ ProductModel copyWith({  num? id,
     }
     return map;
   }
-
 }
-
-/// rate : 3.9
-/// count : 120
-
 class Rating {
   Rating({
       num? rate, 

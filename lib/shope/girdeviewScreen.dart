@@ -24,6 +24,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(
+              iconTheme: IconThemeData(color: Colors.black),
             flexibleSpace: Container(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -33,45 +34,38 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
               ),
             ),
             centerTitle: false,
-            title: Text("amazon",style: TextStyle(color: Colors.black),),
+            title: Text("amazon.in",style: TextStyle(color: Colors.black),),
             actions: [
                IconButton(onPressed:(){
                  productjsonproviderF.Productejson();
                }, icon: Icon(Icons.history,color: Colors.black,)),
+
+
               PopupMenuButton(itemBuilder: (context){
                 return[
-                  PopupMenuItem(child: InkWell(onTap: (){
+                  PopupMenuItem(onTap: (){
                     productjsonproviderF.filterprice();
                   },
-                    child: Row(
-                      children: [
-                        Text("\$0-49 price",style: TextStyle(fontSize: 20),),
-                      ],
-                    ),
-                  )),
-                  PopupMenuItem(child: InkWell(onTap: (){
+                    child: Text("\$0-49 price",style: TextStyle(fontSize: 20),),
+                  ),
+                  PopupMenuItem(onTap: (){
                     productjsonproviderF.filterpricetwo();
                   },
-                    child: Row(
-                      children: [
-                        Text("\$50-99 price",style: TextStyle(fontSize: 20)),
-                      ],
-                    ),
-                  )),
-                  PopupMenuItem(child: InkWell(onTap: (){
+                    child: Text("\$50-99 price",style: TextStyle(fontSize: 20)),
+                  ),
+                  PopupMenuItem(onTap: (){
                     productjsonproviderF.filterpricethree();
                   },
-                    child: Row(
-                      children: [
-                        Text("\$100-Upto price",style: TextStyle(fontSize: 20)),
-                      ],
-                    ),
-                  )),
+                    child: Text("\$100-Upto price",style: TextStyle(fontSize: 20)),
+                  ),
                 ];
               },icon: Icon(Icons.more_vert,color: Colors.black,),)
             ],
           ),
+
+
           drawer: Drawer(
+
             child: Container(
               color: Colors.white,
               child: Padding(
@@ -105,7 +99,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                                     child: Icon(Icons.arrow_back_ios,
                                       color: Colors.black, size: 20,)),
                               ),
-                              Text("Hi, Virani Raj Ba......",
+                              Text("Hi, Virani Raj Ba...",overflow:TextOverflow.ellipsis,
                                 style: TextStyle(color: Colors.black,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold),)
@@ -115,7 +109,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                             mainAxisAlignment: MainAxisAlignment
                                 .spaceAround,
                             children: [
-                              Text("1234567891   |   MoblieApp Shop",
+                              Text("1234567891   |   amazon.in",
                                 style: TextStyle(color: Colors.black54),),
                             ],
                           ),
@@ -137,6 +131,71 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                         ],
                       ),
                     ),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: [
+                            InkWell(onTap: () {
+                              Navigator.pushNamed(context, 'date');
+                            },
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Row(
+                                  children: [
+                                    Text("Star",
+                                        style: TextStyle(fontSize: 20)),
+                                    SizedBox(width: 20,),
+                                    Icon(Icons.star,color: Colors.amber,
+                                        size: 20),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            InkWell(onTap: () {
+                              Navigator.pushNamed(context, 'time');
+                            },
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Row(
+                                  children: [
+                                    Text("category",
+                                      style: TextStyle(fontSize: 20),),
+                                    SizedBox(width: 20,),
+                                    Icon(Icons.access_time, size: 20),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            InkWell(onTap: () {
+                              Navigator.pushNamed(context, 'step');
+                            },
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Row(
+                                  children: [
+                                    SizedBox(width: 8,),
+                                    Text("Detils",
+                                      style: TextStyle(fontSize: 20),),
+                                    SizedBox(width: 20,),
+                                    Icon(Icons.create_outlined, size: 20),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+
+
                   ],
                 ),
               ),
@@ -153,10 +212,20 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                    Row(
                      children: [
                        Container(margin: EdgeInsets.all(5),height: 140,width: 125,child: Image.network('${productjsonproviderT. mainfinalproducteList[index].image}')),
-                       Container(margin:EdgeInsets.all(5),child: Text("${productjsonproviderT.mainfinalproducteList[index].price}\$")),
+                       Column(
+                         children: [
+                           Container(margin:EdgeInsets.all(5),child: Text("${productjsonproviderT.mainfinalproducteList[index].price}\$")),
+                           Row(
+                             children: [
+                               Text("${productjsonproviderT.mainfinalproducteList[index].rating.rate} "),
+                               Icon(Icons.star,size: 13,color: Colors.amberAccent,),
+                             ],
+                           )
+                         ],
+                       ),
                      ],
                    ),
-                   Container(margin: EdgeInsets.only(top: 7,left: 7,right: 7),child: Text("${productjsonproviderT.mainfinalproducteList[index].title}")),
+                   Container(margin: EdgeInsets.only(top: 7,left: 7,right: 7),child: Text("${productjsonproviderT.mainfinalproducteList[index].title}",overflow:TextOverflow.ellipsis)),
                  ],
                ),
               );}

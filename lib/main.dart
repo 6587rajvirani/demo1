@@ -1,13 +1,13 @@
 
-import 'package:demo1/firatscreen.dart';
+import 'package:demo1/extra/firatscreen.dart';
 import 'package:demo1/json/jsonProvider.dart';
 import 'package:demo1/json/jsonfirstScreen.dart';
 import 'package:demo1/jsontwo/homeScreen.dart';
 import 'package:demo1/jsontwo/twoprovider.dart';
-import 'package:demo1/loginScreen.dart';
+import 'package:demo1/extra/loginScreen.dart';
 import 'package:demo1/shope/girdeviewScreen.dart';
 import 'package:demo1/shope/provider.dart';
-import 'package:demo1/viewScreen.dart';
+import 'package:demo1/extra/viewScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

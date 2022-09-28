@@ -1,5 +1,5 @@
-import 'package:demo1/firatscreen.dart';
-import 'package:demo1/loginScreen.dart';
+import 'package:demo1/extra/firatscreen.dart';
+import 'package:demo1/extra/loginScreen.dart';
 import 'package:flutter/material.dart';
 class TabBarview_Screen extends StatefulWidget {
   const TabBarview_Screen({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:demo1/shared_preferencesScreen.dart';
+import 'package:demo1/extra/shared_preferencesScreen.dart';
 import 'package:flutter/material.dart';
 
 class splesh_Screen extends StatefulWidget {
