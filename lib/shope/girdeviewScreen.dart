@@ -37,7 +37,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
             actions: [
                IconButton(onPressed:(){
                  productjsonproviderF.Productejson();
-               }, icon: Icon(Icons.history)),
+               }, icon: Icon(Icons.history,color: Colors.black,)),
               PopupMenuButton(itemBuilder: (context){
                 return[
                   PopupMenuItem(child: InkWell(onTap: (){
@@ -68,11 +68,10 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                     ),
                   )),
                 ];
-              },icon: Icon(Icons.more_vert),)
+              },icon: Icon(Icons.more_vert,color: Colors.black,),)
             ],
           ),
           drawer: Drawer(
-
             child: Container(
               color: Colors.white,
               child: Padding(
@@ -104,10 +103,10 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                                   Navigator.pop(context);
                                 },
                                     child: Icon(Icons.arrow_back_ios,
-                                      color: Colors.white, size: 20,)),
+                                      color: Colors.black, size: 20,)),
                               ),
                               Text("Hi, Virani Raj Ba......",
-                                style: TextStyle(color: Colors.white,
+                                style: TextStyle(color: Colors.black,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold),)
                             ],
@@ -117,22 +116,22 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                                 .spaceAround,
                             children: [
                               Text("1234567891   |   MoblieApp Shop",
-                                style: TextStyle(color: Colors.white54),),
+                                style: TextStyle(color: Colors.black54),),
                             ],
                           ),
                           Container(
                             margin: EdgeInsets.only(top: 8, bottom: 8),
                             height: 1,
                             width: double.infinity,
-                            color: Colors.white54,
+                            color: Colors.black54,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.settings, color: Colors.white,),
+                              Icon(Icons.settings, color: Colors.black,),
                               SizedBox(width: 5,),
                               Text("Profile & Settings",
-                                style: TextStyle(color: Colors.white),),
+                                style: TextStyle(color: Colors.black),),
                             ],
                           )
                         ],

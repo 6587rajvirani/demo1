@@ -21,7 +21,7 @@ class Products_ProviderNew extends ChangeNotifier{
   }
 
   void filterprice(){
-    mainfinalproducteList.clear();
+
     for(i=0;i<mainfinalproducteList.length;i++)
       {
         if(mainfinalproducteList[i].price! >=0 && mainfinalproducteList[i].price! <=49)
@@ -34,7 +34,6 @@ class Products_ProviderNew extends ChangeNotifier{
   }
 
   void filterpricetwo(){
-    //mainfinalproducteList.clear();
     for(i=0;i<mainfinalproducteList.length;i++)
     {
       if(mainfinalproducteList[i].price! >=50 && mainfinalproducteList[i].price! <=99)
@@ -47,10 +46,10 @@ class Products_ProviderNew extends ChangeNotifier{
   }
 
   void filterpricethree(){
-    //mainfinalproducteList.clear();
+    mainfinalproducteList.clear();
     for(i=0;i<mainfinalproducteList.length;i++)
     {
-      if(mainfinalproducteList[i].price! >=100 && mainfinalproducteList[i].price! <=500000000000)//help//popmenubutten
+      if(mainfinalproducteList[i].price! >=100 )//help//popmenubutten
       {
         filterList.add(mainfinalproducteList[i]);
       }
