@@ -138,7 +138,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                         Column(
                           children: [
                             InkWell(onTap: () {
-                              Navigator.pushNamed(context, 'date');
+                              Navigator.pushNamed(context, 'star');
                             },
                               child: Padding(
                                 padding: const EdgeInsets.all(10.0),
@@ -147,7 +147,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                                     Text("Star",
                                         style: TextStyle(fontSize: 20)),
                                     SizedBox(width: 20,),
-                                    Icon(Icons.star,color: Colors.amber,
+                                    Icon(Icons.star,
                                         size: 20),
                                   ],
                                 ),
@@ -157,7 +157,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                               height: 10,
                             ),
                             InkWell(onTap: () {
-                              Navigator.pushNamed(context, 'time');
+                              Navigator.pushNamed(context, 'category');
                             },
                               child: Padding(
                                 padding: const EdgeInsets.all(10.0),
@@ -166,26 +166,7 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                                     Text("category",
                                       style: TextStyle(fontSize: 20),),
                                     SizedBox(width: 20,),
-                                    Icon(Icons.access_time, size: 20),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            InkWell(onTap: () {
-                              Navigator.pushNamed(context, 'step');
-                            },
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Row(
-                                  children: [
-                                    SizedBox(width: 8,),
-                                    Text("Detils",
-                                      style: TextStyle(fontSize: 20),),
-                                    SizedBox(width: 20,),
-                                    Icon(Icons.create_outlined, size: 20),
+                                    Icon(Icons.shop_2, size: 20),
                                   ],
                                 ),
                               ),
@@ -194,8 +175,6 @@ class _producte_MainScreenState extends State<producte_MainScreen> {
                         )
                       ],
                     ),
-
-
                   ],
                 ),
               ),
