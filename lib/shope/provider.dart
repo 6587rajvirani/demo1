@@ -98,43 +98,47 @@ class Products_ProviderNew extends ChangeNotifier{
   void jeweleryfilter(){
     for(i=0;i<mainfinalproducteList.length;i++)
       {
-        if(mainfinalproducteList[i].category! == "jewelery" );
+        if(mainfinalproducteList[i].category! == "jewelery" )
         {
-           collectionList.add(mainfinalproducteList[i]);
+          collectionList.add(mainfinalproducteList[i]);
         }
       }
     mainfinalproducteList = collectionList;
+    notifyListeners();
   }
 
   void menfilter(){
     for(i=0;i<mainfinalproducteList.length;i++)
     {
-      if(mainfinalproducteList[i].category! == "men's clothing" );
+      if(mainfinalproducteList[i].category! == "men's clothing" )
       {
         collectionList.add(mainfinalproducteList[i]);
       }
     }
     mainfinalproducteList = collectionList;
+    notifyListeners();
   }
   void womenfilter(){
     for(i=0;i<mainfinalproducteList.length;i++)
     {
-      if(mainfinalproducteList[i].category! == "women's clothing" );
+      if(mainfinalproducteList[i].category! == "women's clothing" )
       {
         collectionList.add(mainfinalproducteList[i]);
       }
     }
     mainfinalproducteList = collectionList;
+    notifyListeners();
   }
   void electronicsfilter(){
     for(i=0;i<mainfinalproducteList.length;i++)
     {
-      if(mainfinalproducteList[i].category!  == "electronics");
+      if(mainfinalproducteList[i].category!  == "electronics")
       {
         collectionList.add(mainfinalproducteList[i]);
       }
     }
     mainfinalproducteList = collectionList;
+    notifyListeners();
   }
 
 

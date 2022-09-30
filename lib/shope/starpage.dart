@@ -83,7 +83,7 @@ class _StatFilter_ScreenState extends State<StatFilter_Screen>{
                   children: [
                     Row(
                       children: [
-                        Container(margin: EdgeInsets.all(5),height: 140,width: 125,child: Image.network('${productjsonproviderT. mainfinalproducteList[index].image}')),
+                        Container(margin: EdgeInsets.all(5),height: 115,width: 85,child: Image.network('${productjsonproviderT. mainfinalproducteList[index].image}')),
                         Column(
                           children: [
                             Container(margin:EdgeInsets.all(5),child: Text("${productjsonproviderT.mainfinalproducteList[index].price}\$")),

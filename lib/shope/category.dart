@@ -42,6 +42,7 @@ class _CateGoryFilter_ScreenState extends State<CateGoryFilter_Screen>{
             PopupMenuButton(itemBuilder: (context){
               return [
                 PopupMenuItem(onTap: (){
+                  print("=========================Hello =====================");
                   productjsonproviderF.jeweleryfilter();
                 },child: Text("jewelery")),
                 PopupMenuItem(onTap: (){
@@ -70,7 +71,7 @@ class _CateGoryFilter_ScreenState extends State<CateGoryFilter_Screen>{
                   children: [
                     Row(
                       children: [
-                        Container(margin: EdgeInsets.all(5),height: 140,width: 125,child: Image.network('${productjsonproviderT. mainfinalproducteList[index].image}')),
+                        Container(margin: EdgeInsets.all(5),height: 115,width: 85,child: Image.network('${productjsonproviderT. mainfinalproducteList[index].image}')),
                         Column(
                           children: [
                             Container(margin:EdgeInsets.all(5),child: Text("${productjsonproviderT.mainfinalproducteList[index].price}\$")),

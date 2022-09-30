@@ -1,5 +1,4 @@
 
-import 'dart:js';
 
 import 'package:demo1/extra/firatscreen.dart';
 import 'package:demo1/json/jsonProvider.dart';
